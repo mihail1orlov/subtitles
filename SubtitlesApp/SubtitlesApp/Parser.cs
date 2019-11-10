@@ -12,9 +12,9 @@ namespace SubtitlesApp
         private const string TimeSpanFormat = @"hh\:mm\:ss\,fff";
         private const string Pattern = @"(\d+)(\r\n)(\d{2}:\d{2}:\d{2},\d{3})( --> )(\d{2}:\d{2}:\d{2},\d{3})";
 
-        public Subtitles[] Parse(string[] items)
+        public static Subtitle[] Parse(string[] items)
         {
-            var subtitles = new List<Subtitles>();
+            var subtitles = new List<Subtitle>();
             var regex = new Regex(Pattern);
             foreach (var item in items)
             {
@@ -29,12 +29,13 @@ namespace SubtitlesApp
 
                 subtitles.Add(subtitle);
             }
+
             return subtitles.ToArray();
         }
 
-        private static Subtitles Parse(string number, string startTime, string endTime, string[] content)
+        private static Subtitle Parse(string number, string startTime, string endTime, string[] content)
         {
-            var subtitle = new Subtitles
+            var subtitle = new Subtitle
             {
                 Number = int.Parse(number),
                 StartTime = TimeSpan.ParseExact(startTime, TimeSpanFormat, CultureInfo.InvariantCulture),

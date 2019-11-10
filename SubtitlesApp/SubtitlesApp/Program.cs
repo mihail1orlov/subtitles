@@ -1,5 +1,5 @@
 ﻿using System.IO;
-using System.Text.RegularExpressions;
+using SubtitlesApp.Model;
 
 namespace SubtitlesApp
 {
@@ -11,12 +11,7 @@ namespace SubtitlesApp
             var text = File.ReadAllText(path);
             var items = text.Split("\r\n\r\n");
 
-            var parser = new Parser();
-            parser.Parse(items);
-
-            var pattern = @"(\d+)(\r\n)(\d{2}:\d{2}:\d{2},\d{3})( --> )(\d{2}:\d{2}:\d{2},\d{3})";
-            var regex = new Regex(pattern);
-            var strings = regex.Matches(items[10]);
+            Subtitle[] subtitles = Parser.Parse(items);
         }
     }
 }

@@ -8,22 +8,14 @@ namespace SubtitlesAppTests
     [TestClass]
     public class ParserTests
     {
-        private Parser _target;
-
-        [TestInitialize]
-        public void Init()
-        {
-            _target = new Parser();
-        }
-
         [TestMethod]
         public void ParseTest()
         {
             var items = new[]{ "11\r\n00:03:24,204 --> 00:03:27,834\r\n'The computer which controlled\r\nthe machines, Skynet," };
 
-            var actual = _target.Parse(items)[0];
+            var actual = Parser.Parse(items)[0];
 
-            var expected = new Subtitles
+            var expected = new Subtitle
             {
                 Number = 11,
                 StartTime = new TimeSpan(0, 0, 3, 24, 204),

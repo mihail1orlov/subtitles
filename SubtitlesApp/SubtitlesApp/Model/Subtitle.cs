@@ -2,7 +2,7 @@
 
 namespace SubtitlesApp.Model
 {
-    public class Subtitles
+    public class Subtitle
     {
         public int Number { get; set; }
         public TimeSpan StartTime { get; set; }
