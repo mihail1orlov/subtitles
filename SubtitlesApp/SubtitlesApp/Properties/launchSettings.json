@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "SubtitlesApp": {
+      "commandName": "Project",
+      "commandLineArgs": "../../../../testData/terminator.srt"
+    }
+  }
+}
