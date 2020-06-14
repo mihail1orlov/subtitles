@@ -8,9 +8,10 @@ namespace SubtitlesApp
     {
         private static void Main(string[] args)
         {
-            var path = args[0];
+            var path = @"M:\lessons\Mosh Hamedani - All Courses Pack\React\Mastering React\01 - Getting Started (00h28m)\1- What is React.vtt";
             var text = File.ReadAllText(path);
-            var items = text.Split("\r\n\r\n");
+            var txt = text.Replace("\r\n", "\n");
+            var items = txt.Split("\n\n");
 
             Subtitle[] subtitles = Parser.Parse(items);
             var sb = new StringBuilder();

@@ -9,8 +9,8 @@ namespace SubtitlesApp
 {
     public class Parser
     {
-        private const string TimeSpanFormat = @"hh\:mm\:ss\,fff";
-        private const string Pattern = @"(\d+)(\r\n)(\d{2}:\d{2}:\d{2},\d{3})( --> )(\d{2}:\d{2}:\d{2},\d{3})";
+        private const string TimeSpanFormat = @"hh\:mm\:ss\.fff";
+        private const string Pattern = @"(\d+)(\n|\r\n)(\d{2}:\d{2}:\d{2}(.|,)\d{3})( --> )(\d{2}:\d{2}:\d{2}(.|,)\d{3})";
 
         public static Subtitle[] Parse(string[] items)
         {
@@ -19,15 +19,18 @@ namespace SubtitlesApp
             foreach (var item in items)
             {
                 MatchCollection matches = regex.Matches(item);
-                var match = matches.First();
-                var number = match.Groups[1].Value;
-                var startTime = match.Groups[3].Value;
-                var endTime = match.Groups[5].Value;
-                var content = item.Split("\r\n").Skip(2).ToArray();
+                if (matches.Any())
+                {
+                    var match = matches.First();
+                    var number = match.Groups[1].Value;
+                    var startTime = match.Groups[3].Value.Replace(",", ".");
+                    var endTime = match.Groups[6].Value.Replace(",", ".");
+                    var content = item.Replace("\r\n", "\n").Split("\n").Skip(2).ToArray();
 
-                var subtitle = Parse(number, startTime, endTime, content);
+                    var subtitle = Parse(number, startTime, endTime, content);
 
-                subtitles.Add(subtitle);
+                    subtitles.Add(subtitle);
+                }
             }
 
             return subtitles.ToArray();

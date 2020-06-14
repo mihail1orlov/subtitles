@@ -32,5 +32,30 @@ namespace SubtitlesAppTests
             Assert.AreEqual(expected.Number, actual.Number);
             CollectionAssert.AreEqual(expected.Content, actual.Content);
         }
+
+        [TestMethod]
+        public void ParseVvtTest()
+        {
+            var items = new[]{ "9\n11:22:33.444 --> 21:31:41.511\nReact is a JavaScript library for building fast and interactive\nuser interfaces. It was developed at Facebook in 2011," };
+
+            var actual = Parser.Parse(items)[0];
+
+            var expected = new Subtitle
+            {
+                Number = 9,
+                StartTime = new TimeSpan(0,11, 22, 33, 444),
+                EndTime = new TimeSpan(0, 21, 31, 41, 511),
+                Content = new[]
+                {
+                    "React is a JavaScript library for building fast and interactive",
+                    "user interfaces. It was developed at Facebook in 2011,"
+                }
+            };
+
+            Assert.AreEqual(expected.StartTime, actual.StartTime);
+            Assert.AreEqual(expected.EndTime, actual.EndTime);
+            Assert.AreEqual(expected.Number, actual.Number);
+            CollectionAssert.AreEqual(expected.Content, actual.Content);
+        }
     }
 }
