@@ -5,7 +5,9 @@ VisualStudioVersion = 16.0.28803.156
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SubtitlesApp", "SubtitlesApp\SubtitlesApp.csproj", "{B33E3E17-F784-4CBB-8387-F575BE5E16CE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SubtitlesAppTests", "SubtitlesAppTests\SubtitlesAppTests.csproj", "{B445102A-F686-4A30-9EA3-87F672C44A3D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SubtitlesAppTests", "SubtitlesAppTests\SubtitlesAppTests.csproj", "{B445102A-F686-4A30-9EA3-87F672C44A3D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Subtitles.Model", "Subtitles.Model\Subtitles.Model.csproj", "{2878F767-434F-4D12-BD19-B03EEFAA51D0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{B445102A-F686-4A30-9EA3-87F672C44A3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B445102A-F686-4A30-9EA3-87F672C44A3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B445102A-F686-4A30-9EA3-87F672C44A3D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2878F767-434F-4D12-BD19-B03EEFAA51D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2878F767-434F-4D12-BD19-B03EEFAA51D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2878F767-434F-4D12-BD19-B03EEFAA51D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2878F767-434F-4D12-BD19-B03EEFAA51D0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
