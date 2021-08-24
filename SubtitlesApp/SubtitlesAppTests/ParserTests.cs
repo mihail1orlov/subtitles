@@ -1,14 +1,13 @@
 ﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SubtitlesApp;
 using SubtitlesApp.Model;
+using Xunit;
 
 namespace SubtitlesAppTests
 {
-    [TestClass]
     public class ParserTests
     {
-        [TestMethod]
+        [Fact]
         public void ParseTest()
         {
             var items = new[]{ "11\r\n00:03:24,204 --> 00:03:27,834\r\n'The computer which controlled\r\nthe machines, Skynet," };
@@ -27,13 +26,13 @@ namespace SubtitlesAppTests
                 }
             };
 
-            Assert.AreEqual(expected.StartTime, actual.StartTime);
-            Assert.AreEqual(expected.EndTime, actual.EndTime);
-            Assert.AreEqual(expected.Number, actual.Number);
-            CollectionAssert.AreEqual(expected.Content, actual.Content);
+            Assert.Equal(expected.StartTime, actual.StartTime);
+            Assert.Equal(expected.EndTime, actual.EndTime);
+            Assert.Equal(expected.Number, actual.Number);
+            Assert.Equal(expected.Content, actual.Content);
         }
 
-        [TestMethod]
+        [Fact]
         public void ParseVvtTest()
         {
             var items = new[]{ "9\n11:22:33.444 --> 21:31:41.511\nReact is a JavaScript library for building fast and interactive\nuser interfaces. It was developed at Facebook in 2011," };
@@ -52,10 +51,10 @@ namespace SubtitlesAppTests
                 }
             };
 
-            Assert.AreEqual(expected.StartTime, actual.StartTime);
-            Assert.AreEqual(expected.EndTime, actual.EndTime);
-            Assert.AreEqual(expected.Number, actual.Number);
-            CollectionAssert.AreEqual(expected.Content, actual.Content);
+            Assert.Equal(expected.StartTime, actual.StartTime);
+            Assert.Equal(expected.EndTime, actual.EndTime);
+            Assert.Equal(expected.Number, actual.Number);
+            Assert.Equal(expected.Content, actual.Content);
         }
     }
 }
