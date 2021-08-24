@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SubtitlesAppTests", "Subtit
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Subtitles.Model", "Subtitles.Model\Subtitles.Model.csproj", "{2878F767-434F-4D12-BD19-B03EEFAA51D0}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Subtitles.Model.Tests", "Subtitles.Model.Tests\Subtitles.Model.Tests.csproj", "{53022E40-D250-4EC4-8B00-25120FB83974}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{2878F767-434F-4D12-BD19-B03EEFAA51D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2878F767-434F-4D12-BD19-B03EEFAA51D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2878F767-434F-4D12-BD19-B03EEFAA51D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{53022E40-D250-4EC4-8B00-25120FB83974}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53022E40-D250-4EC4-8B00-25120FB83974}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53022E40-D250-4EC4-8B00-25120FB83974}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53022E40-D250-4EC4-8B00-25120FB83974}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
