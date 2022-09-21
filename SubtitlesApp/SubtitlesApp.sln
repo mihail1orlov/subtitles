@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.28803.156
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32630.192
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SubtitlesApp", "SubtitlesApp\SubtitlesApp.csproj", "{B33E3E17-F784-4CBB-8387-F575BE5E16CE}"
 EndProject
@@ -10,6 +10,8 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Subtitles.Model", "Subtitles.Model\Subtitles.Model.csproj", "{2878F767-434F-4D12-BD19-B03EEFAA51D0}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Subtitles.Model.Tests", "Subtitles.Model.Tests\Subtitles.Model.Tests.csproj", "{53022E40-D250-4EC4-8B00-25120FB83974}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SubtitlesWeb", "SubtitlesWeb\SubtitlesWeb.csproj", "{E2C959C8-0CB4-4E0F-A26B-A681541D5493}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{53022E40-D250-4EC4-8B00-25120FB83974}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{53022E40-D250-4EC4-8B00-25120FB83974}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{53022E40-D250-4EC4-8B00-25120FB83974}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E2C959C8-0CB4-4E0F-A26B-A681541D5493}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2C959C8-0CB4-4E0F-A26B-A681541D5493}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2C959C8-0CB4-4E0F-A26B-A681541D5493}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2C959C8-0CB4-4E0F-A26B-A681541D5493}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
