@@ -18,34 +18,33 @@ namespace SubtitlesApp
         {
             //Tupilka();
             //new TestSpeechRecognizer().Start();
-            Speak();
+            //Speak();
             //CreateDictionary();
             //CreateHtmlFromDictionary();
-            //CreateSubtitle();
+            CreateSubtitle();
         }
 
         private static void Tupilka()
         {
-            using (var tupilka = new Tupilka())
+            using var tupilka = new Tupilka();
+            tupilka.Start();
+            do
             {
-                tupilka.Start();
-                do
-                {
-                    Console.Clear();
-                    Console.Write("Enter any line: ");
-                    tupilka.Pause();
-                    var line = Console.ReadLine();
-                    tupilka.UnPause();
-                    Console.Write($"You entered the {line}");
-                } while (Console.ReadKey().Key != ConsoleKey.Q);
-            }
+                Console.Clear();
+                Console.Write("Enter any line: ");
+                tupilka.Pause();
+                var line = Console.ReadLine();
+                tupilka.UnPause();
+                Console.Write($"You entered the {line}");
+            } while (Console.ReadKey().Key != ConsoleKey.Q);
         }
 
         private static void Speak()
         {
             var devid = new SpeechSynthesizer();
             var irina = new SpeechSynthesizer();
-            irina.SelectVoice("Microsoft Irina Desktop");
+            irina.SelectVoice("Microsoft David Desktop");
+            // irina.SelectVoice("Microsoft Zira");
             devid.SelectVoice("Microsoft David Desktop");
 
             devid.Speak("look after");
